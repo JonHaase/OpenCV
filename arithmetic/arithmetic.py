@@ -28,6 +28,8 @@ print("min of 0: {}".format(str(cv2.subtract(np.uint8([50]), np.uint8([100])))))
 # range. This is important to keep in mind when working with images.
 print("wrap around: {}".format(str(np.uint8([200]) + np.uint8([100]))))
 print("wrap around: {}".format(str(np.uint8([50]) - np.uint8([100]))))
+print("HW: {}".format(str(np.uint8([1]) - np.uint8([251]))))
+
 
 # let's increase the intensity of all pixels in our image by 100 -- we
 # accomplish this by constructing a NumPy array that is the same size of
@@ -44,3 +46,9 @@ M = np.ones(image.shape, dtype = "uint8") * 50
 subtracted = cv2.subtract(image, M)
 cv2.imshow("Subtracted", subtracted)
 cv2.waitKey(0)
+
+#homework
+H = np.ones(image.shape, dtype = "uint8") * 75
+added_hw = cv2.add(image, H)
+(b, g, r) = added_hw[152, 61]
+print("r", r, "g", g, "b", b)
