@@ -23,6 +23,7 @@ cv2.imshow("Red", R)
 cv2.imshow("Green", G)
 cv2.imshow("Blue", B)
 cv2.waitKey(0)
+print("G channel at 80, 5", G[5, 80])
 
 # merge the image back together again
 merged = cv2.merge([B, G, R])
