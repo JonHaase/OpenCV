@@ -1,6 +1,6 @@
 import argparse
 
-# extract contours from the image
+# extract contours from the image -
 cnts = cv2.findContours(thresh.copy(), cv2.RETR_EXTERNAL,
 	cv2.CHAIN_APPROX_SIMPLE)
 cnts = imutils.grab_contours(cnts)
